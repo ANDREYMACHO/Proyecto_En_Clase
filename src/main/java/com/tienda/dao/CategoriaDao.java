@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author adrianchavarriamora
+ * @author andreysanchez
  */
 public interface CategoriaDao extends JpaRepository<Categoria,Long>{ //Conexion a la base de datos
     
