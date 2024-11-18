@@ -27,4 +27,7 @@ public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, do
     @Query(nativeQuery=true,
             value="SELECT * FROM producto where producto.precio BETWEEN :precioInf AND :precioSup ORDER BY producto.descripcion ASC")
     public List<Producto> metodoNativo(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup); 
+    
+    //Precios menores que = ? tarea#4
+    public List<Producto> findByPrecioLessThan (double precioMax);
 }

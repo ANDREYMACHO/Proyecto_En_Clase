@@ -82,4 +82,18 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/consulta";
     }
+    
+    
+    @PostMapping("/query4")
+    public String consultaMenorQue(@RequestParam(value = "precioMax") double precioMax, Model model) {
+        var productos = productoService.findByPrecioLessThan(precioMax);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("PrecioMax" ,precioMax);
+        return "/pruebas/consulta";
+    }
+    
+    
+    
+    
 }

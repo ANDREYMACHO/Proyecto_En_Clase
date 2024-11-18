@@ -60,5 +60,14 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> metodoNativo(double precioInf, double precioSup) {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
-
+    
+    //Buscar productos por el nombre tarea#4
+    @Override
+    @Transactional(readOnly=true) 
+    public List<Producto> findByPrecioLessThan (double precioMax){
+    return productoDao.findByPrecioLessThan(precioMax);
+    }
+            
+            
+      
 }

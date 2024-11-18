@@ -30,4 +30,7 @@ public interface ProductoService {
     
      //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(double precioInf, double precioSup);
+    
+    //Precio menor que = ? tarea#4
+    public List<Producto> findByPrecioLessThan (double precioMax);
 }
