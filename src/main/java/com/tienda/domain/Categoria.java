@@ -5,6 +5,9 @@ import java.io.Serializable;
 import java.util.List;
 import lombok.Data;
 
+//Primero se crea el domain
+
+
 @Data
 @Entity
 @Table(name="Categoria")
